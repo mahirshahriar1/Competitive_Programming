@@ -1,5 +1,4 @@
-// need to update this one
-
+/*
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -60,6 +59,50 @@ int main()
 
         return 0;
     }
+*/
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int n,k,a;
+    char b;
+
+    cin>>n;
+    while(n--)
+    {
+        map <char, double> list;
+        cin>>k;
+        while(k--)
+        {
+            cin>>b>>a;
+            list[b]=a;
+        }
+        cin>>k;
+        cin.ignore();
+
+        string str;
+        double price=0;
+        for(int i=0;i<k;i++)
+        {
+            getline(cin,str);
+            for(int i=0;i<str.size();i++)
+            {
+                auto it= list.find(str[i]);
+                if(it!=list.end())
+                    price+=it->second;
+            }
+          }
+        cout<<fixed<<setprecision(2)<<price/100<<"$"<<endl;
+
+    }
+
+
+    return 0;
+}
+
 
 
 
