@@ -1,0 +1,9 @@
+
+W1: Easy Implementation; Vector, String, Deque                         https://vjudge.net/contest/500125
+W2: Primality, Divisors, NoD, SoD in O(sqrt(n)); Modular Arithmetic    https://vjudge.net/contest/502560
+S13 W3: Set & Map Variations, Upper & Lower Bound                      https://vjudge.net/contest/504976
+W4: Sieve for Primality, SoD, NoD; GCD, LCM                            https://vjudge.net/contest/507041
+W5: Binary Exponentiation; Prime-factorization                         https://vjudge.net/contest/509565
+W6: Prefix Sum; Stack, Queue, Priority Queue                           https://vjudge.net/contest/511401
+W7: Precision Handling; Binary Search                                  https://vjudge.net/contest/512339 
+ 
