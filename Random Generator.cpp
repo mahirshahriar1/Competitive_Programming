@@ -17,7 +17,7 @@ int main()
     cout << w <<' '<< n << endl;
     for (int i = 0; i < n; i++)
     {
-        cout << rand() % 100 + 1 << ' ' << myrand(100) + 1 << endl;
+        cout << myrand(100) + 1 << ' ' << myrand(100) + 1 << endl;
     }
 
     return 0;
