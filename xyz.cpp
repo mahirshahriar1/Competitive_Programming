@@ -1,25 +1,25 @@
-#ifdef ONLINE_JUDGE
-#define debug(...) ;
-#else
-#include "debug.h"
-#endif
-
+#if defined LOCAL && !defined ONLINE_JUDGE
+#include "debug.cpp"
+#else 
 #include <bits/stdc++.h>
 using namespace std;
+#define dbg(...);
+#endif
+
 typedef long long int ll;
 
 #define endl '\n'
-#define range(v) v.begin(), v.end()
+#define all(v) v.begin(), v.end()
 #define print(v) for(auto& i:v) cout<<i<<" "; cout<<endl;
 #define len(v) (int)v.size()
-#define cerr if(false)cerr
 
 template<typename T>
 inline void operator>>(istream& istream, vector<T>& v){for (T& i : v) {cin >> i;}}
 
+#define cerr if(false)cerr
+
 void solve()
 {
-
    
 }
 
@@ -27,13 +27,13 @@ int main()
 {
     ios_base::sync_with_stdio(false), cin.tie(nullptr);
 
-    int t = 1,tc = 0;
+    int t = 1, tc = 0;
     cin >> t;
     while (t--)
     {
-        cerr<<"Case #"<<++tc<<": \n";
+        cerr << "Case #" << ++tc << ": \n";
         solve();
-        cerr<<endl;
+        cerr << endl;
     }
 
     return 0;
