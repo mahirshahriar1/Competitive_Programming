@@ -1,44 +1,42 @@
-#if defined LOCAL && !defined ONLINE_JUDGE
-#include "debug.cpp"
-#else 
-#include <bits/stdc++.h>
-using namespace std;
-#define dbg(...);
+#ifdef LOCAL
+#include "debug.h"
+#else
+#define debug(...)
 #endif
 
+#include <bits/stdc++.h>
+using namespace std;
 typedef long long int ll;
-
-#define endl '\n'
-#define all(v) v.begin(), v.end()
-#define print(v) for(auto& i:v) cout<<i<<" "; cout<<endl;
-#define len(v) (int)v.size()
 
 template<typename T>
 inline void operator>>(istream& istream, vector<T>& v){for (T& i : v) {cin >> i;}}
+template <typename T>
+inline void operator<<(ostream &ostream, vector<T> &v){for (T &i : v) cout << i << ' '; cout << endl;}
 
-#define cerr if(false)cerr
+#define endl '\n'
+#define all(v) v.begin(), v.end()
+#define len(v) (int) v.size()
 
-void solve()
+// #define cerr if(false) cerr
+
+void solve([[maybe_unused]]const int &tc)
 {
-   
+    
 }
 
-int main()
+int32_t main()
 {
     ios_base::sync_with_stdio(false), cin.tie(nullptr);
 
-    int t = 1, tc = 0;
+    int t = 1;
     cin >> t;
-    while (t--)
-    {
-        cerr << "Case #" << ++tc << ": \n";
-        solve();
-        cerr << endl;
+    for (int tc = 1; tc <= t; ++tc) {    
+        debug (tc);   
+        solve(tc);        
     }
 
     return 0;
 }
-
 //-------------------------------------
 
 
