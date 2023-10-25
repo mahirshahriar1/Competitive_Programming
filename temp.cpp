@@ -11,13 +11,14 @@
 using namespace std;
 typedef long long int ll;
 
-#define endl '\n'
-#define all(v) v.begin(), v.end()
-#define print(v) for(auto& i:v) cout<<i<<" "; cout<<endl;
-#define len(v) (int)v.size()
-
 template<typename T>
 inline void operator>>(istream& istream, vector<T>& v){for (T& i : v) {cin >> i;}}
+template <typename T>
+inline void operator<<(ostream &ostream, vector<T> &v){for (T &i : v) cout << i << ' '; cout << endl;}
+
+#define endl '\n'
+#define all(v) v.begin(), v.end()
+#define len(v) (int) v.size()
 
 // #define cerr if(false) cerr
 
