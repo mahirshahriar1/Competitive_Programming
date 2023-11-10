@@ -2541,3 +2541,28 @@ while (l <= r)
         }
     }
 /////////////
+
+const int N = 2e5 + 5, LG = 18;
+int64_t st[N][LG], lgs[N];
+
+void sparse_table(vector<int>& a, int n) {
+    for (int i = 0; i < n; ++i) {
+        st[i][0] = a[i];
+    }
+    for (int i = 0; i <= n; ++i) {
+        lgs[i] = __lg(i);
+    }
+
+    for (int j = 1; j < LG; ++j) {
+        for (int i = 0; i + (1 << j) - 1 < n; ++i) {
+            st[i][j] = (st[i][j - 1] & st[i + (1 << (j - 1))][j - 1]);
+            // st[i][j] = min(st[i][j - 1], st[i + (1 << (j - 1))][j - 1]);
+        }
+    }
+}
+
+int rmq(int l, int r) {
+    int j = lgs[r - l + 1];
+    return min(st[l][j], st[r - (1 << j) + 1][j]);
+}
+
