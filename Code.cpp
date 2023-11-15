@@ -2555,7 +2555,7 @@ void sparse_table(vector<int>& a, int n) {
 
     for (int j = 1; j < LG; ++j) {
         for (int i = 0; i + (1 << j) - 1 < n; ++i) {
-            st[i][j] = (st[i][j - 1] + st[i + (1 << (j - 1))][j - 1]);
+            st[i][j] = (st[i][j - 1] & st[i + (1 << (j - 1))][j - 1]);
             // st[i][j] = min(st[i][j - 1], st[i + (1 << (j - 1))][j - 1]);
         }
     }
@@ -2566,13 +2566,3 @@ int rmq(int l, int r) {
     return min(st[l][j], st[r - (1 << j) + 1][j]);
 }
 
-int range_sum(int l, int r) {
-    int sum = 0;
-    for (int j = LG - 1; j >= 0; --j) {
-        if ((1 << j) <= r - l + 1) {
-            sum += st[l][j];
-            l += (1 << j);
-        }
-    }
-    return sum;
-}
